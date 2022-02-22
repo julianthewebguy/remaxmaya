@@ -16,23 +16,6 @@ function addCustomClasses() {
     headerDiv.classList.add('headerBG');
 }
 document.ready = addCustomClasses;
-window.onscroll = function() {
-    makeSticky()
-};
-
-function makeSticky() {
-    if (window.location.href.indexOf("listing_") > -1 || window.location.href.indexOf("listingid") > -1 || window.location.href.indexOf("Listing_") > -1) {
-        var header = document.getElementById('remaxHeader');
-    } else {
-        var header = document.getElementById('fullHeader');
-    }
-    var sticky = header.offsetTop;
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-}
 (function($) {
     $(function() {
         $('.nav').append($('<div class="nav-mobile"></div>'));
